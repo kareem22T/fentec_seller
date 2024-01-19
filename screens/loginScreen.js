@@ -87,7 +87,7 @@ export default function Login({ navigation }) {
         setLoading(true)
         setErrors([])
         try {
-            const response = await axios.post(`https://3051-102-47-220-241.ngrok-free.app/sellers/login`, {
+            const response = await axios.post(`https://adminandapi.fentecmobility.com/sellers/login`, {
                 emailorphone: email,
                 password: password,
                 api_password: 'Fentec@scooters.algaria'
@@ -123,7 +123,7 @@ export default function Login({ navigation }) {
     }, []);
 
     return (
-        <SafeAreaView style={styles.wrapper}>
+        <ScrollView>
             <BackgroundImage></BackgroundImage>
             <Text style={{
                 position: 'absolute', top: 50, right: 20, color: "#fff",
@@ -164,10 +164,10 @@ export default function Login({ navigation }) {
                 </View>
             )}
             <View style={styles.contianer}>
-                <Text style={{ fontSize: 38, textAlign: 'center', fontFamily: 'Outfit_700Bold', color: "rgba(255, 115,0, 1)" }}>سجل الدخول {'\n'}كبائع نقاط</Text>
-                <Image source={require('./../assets/imgs/cuate.png')} style={{
+                <Text style={{ fontSize: 38, textAlign: 'center', fontFamily: 'Outfit_700Bold', color: "#000", marginTop: 40 }}>سجل الدخول {'\n'}كبائع نقاط</Text>
+                <Image source={require('./../assets/imgs/login_splash.png')} style={{
                     width: "90%",
-                    height: 300,
+                    height: 400,
                     resizeMode: 'contain',
                 }} />
                 <View style={{ gap: 15, width: '100%', alignItems: 'center' }}>
@@ -212,7 +212,7 @@ export default function Login({ navigation }) {
                     </TouchableOpacity>
                 </View>
             </View>
-        </SafeAreaView>
+        </ScrollView>
     );
 }
 
@@ -230,7 +230,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
         width: '100%',
-        zIndex: 3
+        zIndex: 3,
+        padding: 10
     },
     main_img: {
         width: 130,

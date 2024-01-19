@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fentec_seller",
-    "slug": "fentec_seller",
+    "name": "Point Seller",
+    "slug": "fentec-point-seller",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kareem11.fentecpointseller"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f0ad6f05-18e8-4e01-936f-44e7860a6288"
+      }
+    },
+    "owner": "kareem11"
   }
 }

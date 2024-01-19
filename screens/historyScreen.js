@@ -41,7 +41,7 @@ export default function History({ navigation }) {
     const getUser = async (token) => {
         setErrors([])
         try {
-            const response = await axios.post(`https://3051-102-47-220-241.ngrok-free.app/sellers/get-user`, {
+            const response = await axios.post(`https://adminandapi.fentecmobility.com/sellers/get-user`, {
                 api_password: 'Fentec@scooters.algaria',
             },
                 {

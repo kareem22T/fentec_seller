@@ -36,7 +36,7 @@ export default function Profile({ navigation }) {
     const handleTransfer = async () => {
         setErrors([])
         try {
-            const response = await axios.post(`https://3051-102-47-220-241.ngrok-free.app/sellers/get-client`, {
+            const response = await axios.post(`https://adminandapi.fentecmobility.com/sellers/get-client`, {
                 api_password: 'Fentec@scooters.algaria',
                 code: Code
             },);
@@ -88,7 +88,7 @@ export default function Profile({ navigation }) {
     const getUser = async (token) => {
         setErrors([])
         try {
-            const response = await axios.post(`https://3051-102-47-220-241.ngrok-free.app/sellers/get-user`, {
+            const response = await axios.post(`https://adminandapi.fentecmobility.com/sellers/get-user`, {
                 api_password: 'Fentec@scooters.algaria',
             },
                 {
@@ -119,7 +119,7 @@ export default function Profile({ navigation }) {
     const handleConfirmTransfer = async (token) => {
         setErrors([])
         try {
-            const response = await axios.post(`https://3051-102-47-220-241.ngrok-free.app/sellers/transfer`, {
+            const response = await axios.post(`https://adminandapi.fentecmobility.com/sellers/transfer`, {
                 api_password: 'Fentec@scooters.algaria',
                 code: Code,
                 amount: Amount,
